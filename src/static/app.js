@@ -26,9 +26,14 @@ document.addEventListener("DOMContentLoaded", () => {
           <p><strong>Schedule:</strong> ${details.schedule}</p>
           <p><strong>Availability:</strong> ${spotsLeft} spots left</p>
           <div class="participants-section">
-            <strong>Participants (${details.participants.length}/${details.max_participants}):</strong>
+            <div class="participants-heading">
+              <strong>Participants</strong>
+              <span class="participants-count">${details.participants.length}/${details.max_participants} signed up</span>
+            </div>
             <ul class="participants-list">
-              ${details.participants.map(p => `<li>${p}</li>`).join('')}
+              ${details.participants.length
+                ? details.participants.map(p => `<li>${p}</li>`).join('')
+                : '<li class="participants-empty">No one has signed up yet</li>'}
             </ul>
           </div>
         `;

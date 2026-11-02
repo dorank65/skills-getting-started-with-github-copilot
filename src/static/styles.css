@@ -76,26 +76,50 @@ section h3 {
 
 .participants-section {
   margin-top: 15px;
-  padding-top: 15px;
-  border-top: 1px solid #ddd;
+  padding: 12px 14px;
+  border: 1px solid #d5e6e1;
+  border-radius: 4px;
+  background-color: #f1f8f6;
 }
 
-.participants-section strong {
-  display: block;
+.participants-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
   margin-bottom: 8px;
-  color: #1a237e;
+}
+
+.participants-heading strong {
+  color: #185b50;
   font-size: 14px;
+}
+
+.participants-count {
+  color: #58736d;
+  font-size: 12px;
+  white-space: nowrap;
 }
 
 .participants-list {
-  list-style-position: inside;
-  padding-left: 10px;
+  list-style: disc outside;
+  padding-left: 20px;
 }
 
 .participants-list li {
-  margin-bottom: 5px;
+  margin: 4px 0;
   color: #555;
   font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.participants-list li::marker {
+  color: #2f806e;
+}
+
+.participants-list .participants-empty {
+  color: #71817d;
+  font-style: italic;
 }
 
 .form-group {
